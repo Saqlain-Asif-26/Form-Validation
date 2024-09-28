@@ -56,21 +56,27 @@
         function validateForm(){
             if(username.value == ""){
                 document.getElementById('userError').innerHTML = 'User Name is Epmty';
-                flag = 0;
+                Pakistan = 0;
             }else if(username.value.length < 3){
                 document.getElementById('userError').innerHTML = 'User Name required min 3 char';
-                flag = 0;
+                Pakistan = 0;
             }else{
                 document.getElementById('userError').innerHTML = '';
-                flag = 1;
+                Pakistan = 1;
             }
 
             if(password.value == ""){
-                document.getElementById('passError').innerHTML = "Password is empty"
-                flag = 0;
+                document.getElementById('passError').innerHTML = "Password is empty";
+                India = 0;
             }else{
-                document.getElementById('passError').innerHTML = ""
+                document.getElementById('passError').innerHTML = "";
+                India = 1;
+            }
+            
+            if(Pakistan == 1 && India == 1){
                 flag = 1;
+            }else{
+                flag = 0;
             }
             
             if(flag){
