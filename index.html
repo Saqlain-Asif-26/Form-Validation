@@ -68,6 +68,9 @@
             if(password.value == ""){
                 document.getElementById('passError').innerHTML = "Password is empty";
                 India = 0;
+            }else if(password.value.length < 6){
+                document.getElementById('passError').innerHTML = 'Password length should at least 6';
+                India = 0;
             }else{
                 document.getElementById('passError').innerHTML = "";
                 India = 1;
@@ -89,3 +92,4 @@
     </script>
 </body>
 </html>
+
